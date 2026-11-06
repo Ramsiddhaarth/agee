@@ -1,0 +1,10 @@
+<head>
+    <title>Vote Check</title>
+</head>
+<body>
+    <form th:action="@{/checkEligibility}" method="post">
+        <input type="number" name="age" required th:value="${enteredAge}">
+        <button type="submit">Check</button>
+    </form>
+    <b th:if="${message}" th:text="${message}"></b>
+</body>
